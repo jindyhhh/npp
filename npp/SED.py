@@ -10,6 +10,9 @@ from scipy.stats import dirichlet, beta as Be
 from scipy.special import logsumexp, gammaln
 import du, du.stats # move useful functions from these to utils (catrnd)
 import functools, itertools
+import os
+os.environ['MPLCONFIGDIR'] = os.getcwd() + "/configs/"
+ import matplotlib.pyplot as plt
 
 def opts(**kwargs):
   r''' Construct algorithm options
