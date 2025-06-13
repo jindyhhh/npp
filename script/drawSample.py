@@ -87,9 +87,10 @@ def main(args):
     fnames = None
 
   def getImgs(path):
-    imgPaths = du.GetImgPaths(imgPath)
+    imgPaths = du.GetImgPaths(path)
     if len(imgPaths) > 100:
-      du.imread(imgPaths[0]); imgs = du.ParforT(du.imread, imgPaths)
+      du.imread(imgPaths[0])
+      imgs = du.ParforT(du.imread, imgPaths)
     else:
       imgs = du.For(du.imread, imgPaths)
     return imgs
